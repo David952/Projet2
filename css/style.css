@@ -1,4 +1,1114 @@
+/* On définit que l'élement d'un conteneur ne le dépassera pas et s'adaptera à sa taille  
+   et on applique une police pour l'ensemble de la page. */
 * {
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    box-sizing : border-box;
+    font-family : 'Raleway', sans-serif;
 }
+
+/* On enlève le surlignage, la couleur est noire et on définit le gras de tous les liens. */
+a {
+    text-decoration : none;
+    color: black;
+    font-weight : 500;
+}
+
+/* Le texte des liens restent en noir lorsque l'on vient de cliquer desssus. */
+a:visited {
+    color : black;
+}
+
+/* On retire les points de la liste à puces de notre menu. */
+li {
+    list-style : none;
+}
+
+/* On définit une largeur maximale et une hauteur que le navigateur va calculer et sélectionner
+   pour toutes les images. */
+img {
+    max-width : 100%;
+    height : auto;
+}
+
+/* On définit la taille et le gras de nos classes. */
+.tailleTitre {
+    font-size : 23px;
+}
+.texteGras {
+    font-weight : bold;
+}
+
+/* On définit les couleurs des étoiles dans nos classes. */
+.etoileBleu {
+    color : #0065FC;
+}
+.etoileGris {
+    color : #d9d9d9;
+}
+
+/* On définit notre conteneur flexible, on ajoute un espace entre les élements puis on les centres
+   verticalement. */
+header {
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+}
+
+/* Notre menu est affiché en ligne. */
+.menu {
+    display : flex;
+}
+
+.barreRecherche-form {
+    display : flex;
+    align-items : center;
+}
+
+/* On ajoute un espace intérieur, on arrondi deux côtés et on ajoute une couleur de fond. */
+.localisation {
+    background-color : #f2f2f2;
+    border-radius : 16px 0 0 16px;
+    padding : 16px;
+}
+
+ /* On ajoute un espace autour de l'élément, on définit la bordure avec une couleur spécifique
+    puis on modifie le texte en gras. */
+.texteRecherche {
+    font-weight : 700;
+    border : 1px solid #f2f2f2 ;
+    padding : 15px;
+}
+
+ /* On enlève la bordure, on ajoute une couleur de fond puis on arrondi deux côtés, la couleur 
+    du texte est en blanc et sera gras, on ajoute un espace autour de l'élément puis on le rend
+    cliquable */
+.btnRecherche {
+    background-color : #0065FC;
+    color : white;
+    border : none;
+    padding : 15px;
+    border-radius : 0 16px 16px 0;
+    cursor : pointer;
+    font-weight : 700;
+}
+
+/* On dispose les éléments sur la même ligne */
+.filtre-1 {
+    display : inline-block;
+}
+.filtre-2 {
+    display : inline-block;
+}
+
+
+.filtreIconeBtn {
+    display : inline-flex;
+    border :  2px solid #d9d9d9;
+    border-radius : 40px;
+    margin-right : 12px;
+    padding : 3px 4px 4px 0;
+    cursor : pointer;
+}
+
+.filtreIconeBtn:hover {
+    background-color: #deebff;
+}
+
+.filtreIcone {
+    color : #0065fc;
+    background-color : #deebff;
+    height : 48px;
+    width : 50px;
+    padding : 15px;
+    border-radius : 40px;
+    margin : -5px 2px -6px -3px;
+    text-align : center;
+}
+
+.filtreBtn {
+    border : none;
+    background-color : white;
+    margin-right : 10px;
+    cursor : pointer;
+}
+
+.filtreBtn:hover {
+    background-color: #deebff;
+    color: #0065FC;
+}
+
+.infos {
+    display : flex;
+    align-items : center;
+}
+
+.infoIcone {
+    border : 1px solid #d9d9d9;
+    height : 31px;
+    width : 33px;
+    color : #0065FC;
+    padding : 5px;
+    border-radius : 20px;
+    margin-right : 10px;
+    text-align : center;
+}
+
+.HebPopulaires {
+    display : flex;
+}
+
+.Hebergements {
+    display : flex;
+    flex-direction : column;
+    background-color : #f2f2f2;
+    border-radius : 16px 16px 16px 16px;
+}
+
+/* On définit notre conteneur flexible puis retourne à la ligne si n'y a plus d'espace */
+.hebergements-1 {
+    display : flex;
+    flex-wrap : wrap;
+}
+.hebergements-2 {
+    display : flex;
+    flex-wrap : wrap;
+}
+
+/* On met une couleur de fond, on arrondi chaque coin de notre élement, on ajoute de l'ombre
+   pour chaque côtés puis on le rend cliquable */
+.annonceHebergements {
+    background-color : white;
+    border-radius : 16px 16px 16px 16px;
+    box-shadow : 1px 1px 20px #d9d9d9;
+    cursor : pointer;
+}
+
+.HebImage {
+    border-radius : 16px 16px 0 0;
+    padding : 5px 5px 0 5px;
+}
+
+/* On définit notre conteneur flexible, on veut un affichage en colonne, on reduit l'espacement
+   entre les lignes puis on ajoute un espace à gauche */ 
+.annonceHeb-infos {
+    display : flex;
+    flex-direction : column;
+    line-height : 0;
+    margin-left : 15px;
+}
+
+.etoile {
+    font-size : 11px;
+    margin-bottom : 10px;
+}
+
+.Populaires {
+    display : flex;
+    flex-direction : column;
+    background-color : #f2f2f2;
+    border-radius : 16px 16px 16px 16px;
+}
+
+.populairesTitreCourbe {
+    display : flex;
+    align-items : center;
+    justify-content : space-around;
+}
+
+.titrePopulaires {
+    font-size : 12px;
+}
+
+.courbePopulaires {
+    font-size : 22px;
+}
+
+.annoncePopulaires {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+.populairesAnnonces {
+    display : flex;
+    background-color : white;
+    border-radius : 16px 16px 16px 16px;
+    box-shadow : 1px 1px 20px #d9d9d9;
+    cursor : pointer;
+}
+
+.populairesImage {
+    border-radius : 16px 0 0 16px;
+    padding : 5px 0 5px 5px;
+}
+
+.populairesInfosEtoile {
+    display : flex;
+    flex-direction : column;
+    justify-content : space-between;
+}
+
+.Activites {
+    display : flex;
+    flex-direction : column;
+}
+
+.annoncesActivites {
+    display : flex;
+}
+
+.actAnnonces-1 {
+    border-radius : 16px 16px 16px 16px;
+    box-shadow : 1px 1px 20px #d9d9d9;
+    cursor : pointer;
+}
+
+.actAnnonces-image-1 {
+    border-radius : 16px 16px 0 0;
+    box-shadow : 1px 1px 20px #d9d9d9;
+}
+
+.actAnnonces-texte-1 {
+    padding-left : 10px;
+}
+
+.annonceActiv-1 {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+.actAnnonces-2 {
+    border-radius : 16px 16px 16px 16px;
+    box-shadow : 1px 1px 20px #d9d9d9;
+    cursor : pointer;
+}
+
+.actAnnonces-image-2 {
+    border-radius : 16px 16px 0 0;
+    box-shadow : 1px 1px 20px #d9d9d9;
+}
+.actAnnonces-texte-2 {
+    padding-left : 10px;
+}
+
+.actAnnonces-3 {
+    border-radius : 16px 16px 16px 16px;
+    box-shadow : 1px 1px 20px #d9d9d9;
+    cursor : pointer;
+}
+
+.actAnnonces-image-3 {
+    border-radius : 16px 16px 0 0;
+    box-shadow : 1px 1px 20px #d9d9d9;
+}
+
+.actAnnonces-texte-3 {
+    padding-left : 10px;
+}
+
+.actAnnonces-4 {
+    border-radius : 16px 16px 16px 16px;
+    box-shadow : 1px 1px 20px #d9d9d9;
+    cursor : pointer;
+}
+
+.actAnnonces-image-4 {
+    border-radius : 16px 16px 0 0;
+    box-shadow : 1px 1px 20px #d9d9d9;
+}
+
+.actAnnonces-texte-4 {
+    padding-left : 10px;
+}
+
+.annonceActiv-2 {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+}
+
+.actAnnonces-5 {
+    border-radius : 16px 16px 16px 16px;
+    box-shadow : 1px 1px 20px #d9d9d9;
+    cursor : pointer;
+}
+
+.actAnnonces-image-5 {
+    border-radius : 16px 16px 0 0;
+    box-shadow : 1px 1px 20px #d9d9d9;
+}
+
+.actAnnonces-texte-5 {
+    padding-left : 10px;
+}
+
+.actAnnonces-6 {
+    border-radius : 16px 16px 16px 16px;
+    box-shadow : 1px 1px 20px #d9d9d9;
+    cursor : pointer;
+}
+
+.actAnnonces-image-6 {
+    border-radius : 16px 16px 0 0;
+    box-shadow : 1px 1px 20px #d9d9d9;
+}
+
+.actAnnonces-texte-6 {
+    padding-left : 10px;
+}
+
+footer {
+    background-color : #F2F2F2;
+    display : flex;
+    line-height : 200%;
+}
+
+/************************************** VERSION ORDINATEUR **************************************/
+@media screen and (min-width: 992px) {
+    header {
+        margin-left : 50px;
+        margin-right : 50px;
+    }
+
+    .logo {
+        margin-top : 50px;
+        margin-left : 15px;
+    }
+
+    /* On définit la hauteur et la largeur du logo. */
+    .logo-booki {
+        height : 60px;
+        width : 125px;
+    }
+
+    .menu li {
+        padding-right : 30px;
+    }
+
+    /* Lorsque le curseur est sur l'un des deux menus la couleur est bleu et un trait apparaît 
+       en haut du menu sur la partie concernée. */
+    .menu a:hover {
+        color : #0065FC;
+        border-top : 2px solid #0065FC;
+        padding-top : 45px;
+    }
+
+    main {
+        margin-left : 50px;
+        margin-right : 50px;
+    }
+
+    .barreRecherche {
+        margin-bottom : 25px;
+    }
+
+    /* On cache l'élement qui ne doit pas être visible dans la version ordinateur. */
+    .loupeRecherche {
+        display : none;
+    }
+
+    .filtre-2 {
+        margin-left : 30px;
+    }
+
+    .infos {
+        margin : 20px 0 20px 0;
+    }
+    
+    /* On ajoute une marge intérieure en haut, en bas et à gauche du conteneur et on définit 
+       l'espace qu'il va occuper sur la grille. */
+    .Hebergements {
+        padding : 30px 0 30px 30px;
+        flex : 8;
+    }
+
+    .annonceHebergements {
+        height : 255px;
+        width : 330px;
+        margin-right : 45px;
+        margin-bottom: 55px;
+    }
+
+    /* On définit la hauteur et la largeur de l'image puis on spécifie que l'image va remplir 
+       tout le contenu de son conteneur tout en gardant son rapport hauteur/largeur. */
+    .HebImage {
+        height : 155px;
+        width : 100%;
+        object-fit : cover;
+    }
+
+    .Populaires {
+        padding-top : 20px;
+        margin-left : 60px;
+        flex : 4;
+    }
+
+    .titrePopulaires {
+        padding-right : 145px;
+    }
+
+    .populairesAnnonces {
+        height : 165px;
+        width : 85%;
+        margin : 10px 25px 55px 25px;
+    }
+
+    .populairesAnnonces-image-1 {
+        width : 35%;
+    }
+
+    .populairesAnnonces-image-2 {
+        width : 35%;
+    }
+
+    .populairesAnnonces-image-3 {
+        width : 35%;
+    }
+
+    .populairesImage {
+        height : 165px;
+        width : 85%;
+        object-fit : cover;
+    }
+
+    .Activites {
+        margin-top : 50px;
+    }
+
+    .annoncesActivites {
+        height : 500px;
+    }
+
+    /* On définit l'espace que le conteneur va prendre sur la grille, on la place sans changer
+       de position ni celles des autres conteneurs puis on masque tout dépassement du contenu. */ 
+    .actAnnonces-1 {
+        flex : 3;
+        position : relative;
+        overflow : hidden;
+    }
+
+    .actAnnonces-image-1 {
+        height : 100%;
+        position : absolute;
+        object-fit : cover;
+    }
+
+    /* On le positionne par rapport à son conteneur parent puis on choisi le positionnement 
+       voulu grâce à des propriétés, on lui met un fond de couleur et va prendre toute
+       la largeur du conteneur. */
+    .actAnnonces-texte-1 {
+        position : absolute;
+        top : 90%;
+        background-color : white;
+        width : 100%;
+    }
+
+    .annonceActiv-1 {
+        flex : 3;
+        margin : 0 40px 0 40px;
+    }
+
+    .actAnnonces-2 {
+        height : 275px;
+        width : 100%;
+        overflow : hidden;
+        position : relative;
+    }
+
+    .actAnnonces-image-2 {
+        width : 100%;
+        position : absolute;
+        top : -65%;
+    }
+
+    .actAnnonces-texte-2 {
+        position : absolute;
+        top : 83%;
+        background-color : white;
+        width : 100%;
+    }
+
+    .actAnnonces-3 {
+        margin-top : 40px;
+        height : 185px;
+        width : 100%;
+        overflow : hidden;
+        position : relative;
+    }
+
+    .actAnnonces-image-3 {
+        width : 100%;
+        position : absolute;
+        top : -20%;
+    }
+
+    .actAnnonces-texte-3 {
+        position : absolute;
+        top : 73%;
+        background-color : white;
+        width : 100%;
+    }
+
+    .actAnnonces-4 {
+        flex : 3;
+        position : relative;
+        overflow : hidden;
+    }
+
+    .actAnnonces-image-4 {
+        height : 100%;
+        position : absolute;
+        object-fit : cover;
+    }
+
+    .actAnnonces-texte-4 {
+        position : absolute;
+        top : 90%;
+        background-color : white;
+        width : 100%;
+    }
+
+    .annonceActiv-2 {
+        flex : 3;
+        margin-left : 40px;
+    }
+
+    .actAnnonces-5 {
+        height : 225px;
+        position : relative;
+        overflow : hidden;
+    }
+
+    .actAnnonces-image-5 {
+        width : 100%;
+    }
+
+    .actAnnonces-texte-5 {
+        position : absolute;
+        top : 78%;
+        background-color : white;
+        width : 100%;
+    }
+
+    .actAnnonces-6 {
+        margin-top : 60px;
+        height : 215px;
+        width : 100%;
+        position : relative;
+        overflow : hidden;
+    }
+
+    .actAnnonces-image-6 {
+        width : 100%;
+        position : absolute;
+        top : -25%;
+    }
+
+    .actAnnonces-texte-6 {
+        position : absolute;
+        top : 77%;
+        background-color : white;
+        width : 100%;
+    }
+
+    footer {
+        margin-top : 50px;
+        padding : 25px 0 50px 50px;
+    }
+
+    .bloc-1 {
+        margin-right : 270px;
+    }
+
+    .bloc-2 {
+        margin-right : 420px;
+    }
+}
+
+/*************************************** VERSION MOBILE ****************************************/
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction : column;
+        border-bottom : 2px solid #F2F2F2;
+        margin-bottom : 25px;
+    }
+
+    .logo {
+        margin : 0;
+        margin-bottom : 35px;
+    }
+
+    .logo-booki {
+        height : 45px;
+        width : 90px;
+    }
+
+    nav {
+        width : 100%;
+    }
+
+    ul {
+        display : flex;
+        padding : 0;
+        margin : 0;
+    }
+
+    li {
+        flex : 1;
+        text-align : center;
+        padding-bottom : 10px;
+        border-bottom : 2px solid transparent;
+    }
+
+    .menu li:hover {
+        border-bottom : 2px solid #0065FC;
+    }
+
+    .menu a:hover {
+        color : #0065FC;
+    }
+
+    .RechercheFiltres {
+        margin-left : 20px;
+    }
+
+    .texteRecherche {
+        padding-right : 50px;
+    }
+
+    .barreRecherche {
+        margin-top : 40px;
+    }
+
+    .btnRecherche {
+        display : none;
+    }
+
+    .loupeRecherche {
+        padding : 16px;
+        background-color : #0065FC;
+        color : white;
+        border-radius : 16px 16px 16px 16px;
+        margin-left : -15px;
+        cursor : pointer;
+    }
+
+    .filtres {
+        margin-top : 25px;
+        margin-bottom : 20px;
+    }
+
+    .filtreIconeBtn {
+        margin-top : 15px;
+    }
+
+    .infos {
+        margin-bottom : 20px;
+    }
+
+    .HebPopulaires {
+        flex-direction : column;
+    }
+
+    .Populaires {
+        border-radius : 0;
+        padding-bottom : 35px;
+        order : 1;
+    }
+
+    .populairesTitreCourbe {
+        padding-top : 25px;
+        padding-bottom : 10px;
+    }
+
+    .titrePopulaires {
+        padding-right : 40px;
+    }
+
+    .populairesAnnonces {
+        height : 160px;
+        width : 90%;
+        margin-bottom : 15px;
+    }
+
+    .populairesAnnonces-image-1 {
+        width : 50%;
+    }
+
+    .populairesAnnonces-image-2 {
+        width : 77%;
+    }
+
+    .populairesAnnonces-image-3 {
+        width : 52%;
+    }
+
+    .populairesImage {
+        height : 160px;
+        width : 90%;
+        object-fit : cover;
+    }
+
+    .Hebergements {
+        background-color : white;
+        padding : 20px;
+        order : 2;
+    }
+
+    .hebergements-1 {
+        margin-top : 5px;
+        flex-direction : column;
+        align-items : center;
+    }
+
+    .hebergements-2 {
+        flex-direction : column;
+        align-items : center;
+        margin-bottom : 20px;
+    }
+
+    .annonceHebergements {
+        width : 100%;
+        margin-bottom : 20px;
+        overflow : hidden;
+    }
+
+    .annonceHeb-image {
+        height : 120px;
+        position : relative;
+        overflow : hidden;
+    }
+
+    .HebImage {
+        position : absolute;
+    }
+
+    .Activites {
+        margin : 15px;
+    }
+
+    .annoncesActivites {
+        margin-top : 10px;
+        flex-direction : column;
+    }
+
+    .actAnnonces-1 {
+        height : 185px;
+        position : relative;
+        overflow : hidden;
+        margin-bottom : 30px;
+    }
+
+    .actAnnonces-image-1 {
+        width : 100%;
+        position : absolute;
+        top : -10%;
+    }
+
+    .actAnnonces-texte-1 {
+        position : absolute;
+        top : 74%;
+        background-color : white;
+        width : 100%;
+    }
+
+    .actAnnonces-2 {
+        height : 185px;
+        width : 100%;
+        position : relative;
+        overflow : hidden;
+        margin-bottom : 30px;
+    }
+
+    .actAnnonces-image-2 {
+        position : absolute;
+        top : -88%;
+    }
+
+    .actAnnonces-texte-2 {
+        position : absolute;
+        top : 74%;
+        background-color : white;
+        width : 100%;
+    }
+
+    .actAnnonces-3 {
+        height : 185px;
+        width : 100%;
+        position : relative;
+        overflow : hidden;
+        margin-bottom : 30px;
+    }
+
+    .actAnnonces-image-3 {
+        width : 100%;
+        position : absolute;
+        top : -10%;
+    }
+
+    .actAnnonces-texte-3 {
+        position : absolute;
+        top : 74%;
+        background-color : white;
+        width : 100%;
+    }
+
+    .actAnnonces-4 {
+        height : 185px;
+        width : 100%;
+        position : relative;
+        overflow : hidden;
+        margin-bottom : 30px;
+    }
+
+    .actAnnonces-image-4 {
+        width : 100%;
+        position : absolute;
+        top : -10%;
+    }
+
+    .actAnnonces-texte-4 {
+        position : absolute;
+        top : 74%;
+        background-color : white;
+        width : 100%;
+    }
+
+    .actAnnonces-5 {
+        height : 185px;
+        width : 100%;
+        position : relative;
+        overflow : hidden;
+        margin-bottom : 30px;
+    }
+
+    .actAnnonces-image-5 {
+        width : 100%;
+        position : absolute;
+        top : -10%;
+    }
+
+    .actAnnonces-texte-5 {
+        position : absolute;
+        top : 74%;
+        background-color : white;
+        width : 100%;
+    }
+
+    .actAnnonces-6 {
+        height : 185px;
+        width : 100%;
+        position : relative;
+        overflow : hidden;
+        margin-bottom : 30px;
+    }
+
+    .actAnnonces-image-6 {
+        width : 100%;
+        position : absolute;
+        top : -18%;
+    }
+
+    .actAnnonces-texte-6 {
+        position : absolute;
+        top : 74%;
+        background-color : white;
+        width : 100%;
+    }
+
+    footer {
+        flex-direction : column;
+        padding : 25px;
+    }
+}
+/***************************************** VERSION TABLETTE ************************************/
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    .logo {
+        padding : 20px;
+    }
+
+    .logo-booki {
+        height : 75px;
+    }
+
+    .menu li {
+        padding-right : 25px;
+    }
+
+    main {
+        margin-left : 25px;
+        margin-right : 25px;
+    }
+
+    .barreRecherche {
+        margin-top : 25px;
+    }
+
+    .loupeRecherche {
+        display : none;
+    }
+
+    .filtres {
+        margin-top : 30px;
+        margin-bottom : 20px;
+    }
+
+    .filtre-1 {
+        margin-right : 15px;
+    }
+
+    .infos {
+        margin-bottom : 20px;
+    }
+
+    .HebPopulaires {
+        flex-direction : column;
+    }
+
+    .Populaires {
+        order : 1;
+        margin-bottom : 25px;
+    }
+
+    .populairesTitreCourbe {
+        justify-content : space-between;
+        padding : 15px;
+    }
+
+    .populairesAnnonces {
+        height : 165px;
+        width : 65%;
+        margin-bottom : 25px;
+    }
+
+    .populairesAnnonces-image-1 {
+        width : 50%;
+    }
+
+    .populairesAnnonces-image-2 {
+        width : 58%;
+    }
+
+    .populairesAnnonces-image-3 {
+        width : 50%;
+    }
+
+    .populairesImage {
+        height : 165px;
+        width : 90%;
+        object-fit : cover;
+    }
+
+    .Hebergements {
+        order : 2;
+        padding : 15px;
+    }
+
+    .hebergements-1 {
+        justify-content : center;
+        margin-bottom : 20px;
+    }
+
+    .hebergements-2 {
+        justify-content : center;
+        margin-bottom : 30px;
+    }
+
+    .annonceHebergements {
+        width : 255px;
+        margin-right : 20px;
+    }
+
+    .annonceHeb-image {
+        height : 165px;
+    }
+
+    .HebImage {
+        height : 165px;
+        width : 100%;
+    }
+
+    section a {
+        margin-bottom : 10px;
+    }
+
+    .Activites {
+        margin-top : 25px;
+        margin-bottom : 25px;
+    }
+
+    .annoncesActivites {
+        flex-direction : column;
+        margin-top : 25px;
+    }
+
+    .actAnnonces-1 {
+        margin-bottom : 30px;
+    }
+
+    .actAnnonces-image-1 {
+        height : 250px;
+        width : 100%;
+        object-fit : cover;
+    }
+
+    .actAnnonces-2 {
+        margin-bottom : 30px;
+        width : 100%;
+    }
+
+    .actAnnonces-image-2 {
+        height : 250px;
+        width : 100%;
+        object-fit : cover;
+    }
+
+    .actAnnonces-3 {
+        margin-bottom : 30px;
+        width : 100%;
+    }
+
+    .actAnnonces-image-3 {
+        height : 250px;
+        width : 100%;
+        object-fit : cover;
+    }
+
+    .actAnnonces-4 {
+        margin-bottom : 30px;
+    }
+
+    .actAnnonces-image-4 {
+        height : 250px;
+        width : 100%;
+        object-fit : cover;
+    }
+
+    .actAnnonces-5 {
+        margin-bottom : 30px;
+        width : 100%;
+    }
+
+    .actAnnonces-image-5 {
+        height : 250px;
+        width : 100%;
+        object-fit : cover;
+    }
+
+    .actAnnonces-6 {
+        margin-bottom : 30px;
+        width : 100%;
+    }
+
+    .actAnnonces-image-6 {
+        height : 250px;
+        width : 100%;
+        object-fit : cover;
+    }
+
+    footer {
+        justify-content : space-around;
+        padding-bottom: 50px;
+    }
+}
+    
